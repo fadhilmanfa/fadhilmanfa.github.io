@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Staff & Designer - SD Islam Al Azhar 28 Solo Baru</title>
+  <meta name="description" content="Pengalaman Kerja: IT Staff & Designer di SD Islam Al Azhar 28 Solo Baru" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            border: "hsl(var(--border))",
+            input: "hsl(var(--input))",
+            ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))",
+            foreground: "hsl(var(--foreground))",
+            primary: {
+              DEFAULT: "hsl(var(--primary))",
+              foreground: "hsl(var(--primary-foreground))",
+            },
+            muted: {
+              DEFAULT: "hsl(var(--muted))",
+              foreground: "hsl(var(--muted-foreground))",
+            },
+            card: {
+              DEFAULT: "hsl(var(--card))",
+              foreground: "hsl(var(--card-foreground))",
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-background text-foreground antialiased min-h-screen">
+  <!-- Back button -->
+  <div class="fixed top-4 left-4 z-50">
+    <a href="index.html"
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-background/50 backdrop-blur-md border border-border text-foreground hover:bg-background/80 transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m15 18-6-6 6-6" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Cover Background -->
+  <div class="w-full h-[35vh] sm:h-[40vh] relative">
+    <img src="assets/alazhar-back.webp" alt="Cover" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="mx-auto w-full max-w-2xl px-5 relative -mt-14 sm:-mt-16 pb-16">
+    <!-- Institution Photo / Logo overlapping -->
+    <div class="flex justify-center sm:justify-start sm:ml-4 mb-4">
+      <div
+        class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-background bg-card shadow-lg flex-shrink-0 relative z-10">
+        <img src="assets/al-azhar.png" alt="SD Islam Al Azhar Logo" class="w-full h-full object-cover" />
+      </div>
+    </div>
+
+    <!-- Details -->
+    <div class="text-center sm:text-left sm:ml-4 sm:mt-2">
+      <h1 class="text-2xl sm:text-3xl font-bold text-foreground">IT Staff & Designer</h1>
+      <p class="text-lg text-primary font-medium mt-1">SD Islam Al Azhar 28 Solo Baru</p>
+      <p class="text-sm text-foreground/70 font-semibold mt-2">2025 - Sekarang</p>
+    </div>
+
+    <div class="mt-8 border-t border-border pt-6 sm:ml-4">
+      <h2 class="text-lg font-semibold mb-3">Deskripsi Pekerjaan</h2>
+      <p class="text-foreground/90 leading-relaxed">
+        Mengelola infrastruktur IT dan jaringan sekolah, mengembangkan web internal, serta menangani seluruh kebutuhan
+        kreatif seperti desain flyer, konten visual media sosial, dan video editing untuk keperluan sekolah.
+      </p>
+    </div>
+
+    <!-- tools -->
+    <div class="mt-8 pt-6 sm:ml-4">
+      <h2 class="text-lg font-semibold mb-3">Tools</h2>
+      <div class="flex flex-wrap gap-2">
+        <button class="chip" onclick="openToolSheet('canva')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="w-4 h-4">
+            <path
+              d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+            <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+            <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+            <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+          </svg>
+          Canva
+        </button>
+        <button class="chip" onclick="openToolSheet('capcut')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="w-4 h-4">
+            <path d="M7 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M9.15 14.85l8.85 -10.85" />
+            <path d="M6 4l8.85 10.85" />
+          </svg>
+          CapCut
+        </button>
+        <button class="chip" onclick="openToolSheet('wordpress')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="w-4 h-4">
+            <path d="M9.5 9h3" />
+            <path d="M4 9h2.5" />
+            <path d="M11 9l3 11l4 -9" />
+            <path d="M5.5 9l3.5 11l3 -7" />
+            <path
+              d="M18 11c.177 -.528 1 -1.364 1 -2.5c0 -1.78 -1.776 -2.5 -2.5 -2.5c-.88 0 -2.5 .72 -2.5 2.5c0 1.136 .823 1.972 1 2.5" />
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+          </svg>
+          WordPress
+        </button>
+        <button class="chip" onclick="openToolSheet('figma')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="w-4 h-4">
+            <path d="M15 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M6 3m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z" />
+            <path d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15" />
+          </svg>
+          Figma
+        </button>
+      </div>
+    </div>
+
+    <!-- Showcase -->
+    <div class="mt-10 pt-8 sm:ml-4">
+      <h2 class="text-xl font-bold mb-6">Showcase</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+        <!-- Card 1: Gambar/Desain -->
+        <a href="exp-alazhar-showcase/flyer.html"
+          class="group relative block no-underline text-inherit rounded-2xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="aspect-video w-full overflow-hidden bg-muted">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80"
+              alt="Graphic Design Showcase"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-foreground text-base group-hover:text-primary transition-colors">Media Sosial & Flyer</h3>
+            <p class="text-sm text-muted-foreground mt-1">Desain materi promosi dan informasi kegiatan sekolah SD Islam
+              Al Azhar 28.</p>
+          </div>
+        </a>
+
+        <!-- Card 2: Dokumentasi / Video -->
+        <a href="exp-alazhar-showcase/video.html"
+          class="group relative block no-underline text-inherit rounded-2xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="aspect-video w-full overflow-hidden bg-muted relative">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80"
+              alt="Video Editing Showcase"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <!-- Play icon overlay -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div
+                class="w-12 h-12 rounded-full bg-background/80 backdrop-blur-[2px] border border-border/50 flex items-center justify-center text-foreground/90 shadow-sm group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-foreground text-base group-hover:text-primary transition-colors">Video Dokumentasi</h3>
+            <p class="text-sm text-muted-foreground mt-1">Pengeditan video kegiatan sekolah untuk YouTube dan media
+              sosial.</p>
+          </div>
+        </a>
+
+        <!-- Card 3: Website (Paling Terakhir) -->
+        <a href="exp-alazhar-showcase/website.html"
+          class="group relative block no-underline text-inherit rounded-2xl overflow-hidden border border-border bg-card shadow-sm hover:shadow-md transition-all duration-300 sm:col-span-2">
+          <div class="aspect-[21/9] sm:aspect-[21/7] w-full overflow-hidden bg-muted">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
+              alt="Website Showcase"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 object-top" />
+          </div>
+          <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h3 class="font-semibold text-foreground text-lg group-hover:text-primary transition-colors">Website Internal Sekolah</h3>
+              <p class="text-sm text-muted-foreground mt-1 max-w-xl">Pengembangan dan pemeliharaan website serta sistem
+                informasi akademik sekolah.</p>
+            </div>
+            <div
+              class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-primary text-primary-foreground font-medium text-sm whitespace-nowrap">
+              Lihat Detail
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom Sheet Overlay -->
+  <div id="toolSheetOverlay" onclick="closeToolSheet()"
+    style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:100; opacity:0; transition:opacity .3s ease;">
+  </div>
+
+  <!-- Bottom Sheet -->
+  <div id="toolSheet"
+    style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:101; transform:translateY(100%); transition:transform .35s cubic-bezier(.32,.72,0,1);">
+    <div
+      style="max-width:640px; margin:0 auto; border-radius:20px 20px 0 0; overflow:hidden; border:1px solid hsl(var(--border)); border-bottom:none; background:hsl(var(--card));">
+      <!-- Handle bar -->
+      <div style="display:flex; justify-content:center; padding:12px 0 4px;">
+        <div style="width:36px; height:4px; border-radius:999px; background:hsl(var(--muted-foreground) / .3);"></div>
+      </div>
+      <!-- Content -->
+      <div style="padding:8px 24px 32px;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+          <div id="sheetIcon"
+            style="width:40px; height:40px; border-radius:12px; background:hsl(var(--muted)); display:flex; align-items:center; justify-content:center;">
+          </div>
+          <h3 id="sheetTitle" style="font-size:1.15rem; font-weight:700; color:hsl(var(--foreground)); margin:0;"></h3>
+        </div>
+        <p id="sheetDesc"
+          style="font-size:.875rem; line-height:1.6; color:hsl(var(--muted-foreground)); margin:0 0 16px;"></p>
+        <button onclick="closeToolSheet()"
+          style="width:100%; padding:12px; border-radius:12px; border:1px solid hsl(var(--border)); background:hsl(var(--background)); color:hsl(var(--foreground)); font-size:.875rem; font-weight:600; cursor:pointer; transition:background .2s;"
+          onmouseover="this.style.background='hsl(var(--muted))'" onmouseout="this.style.background='hsl(var(--background))'">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toolData = {
+      canva: {
+        name: 'Canva',
+        desc: 'Platform desain grafis online yang digunakan untuk membuat poster, flyer, konten media sosial, dan berbagai materi visual lainnya dengan mudah dan cepat menggunakan template yang tersedia.',
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="hsl(var(--foreground))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25"/><path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg>`
+      },
+      capcut: {
+        name: 'CapCut',
+        desc: 'Aplikasi editing video yang digunakan untuk memotong, menggabungkan, menambahkan transisi, efek visual, teks, dan musik ke dalam video dokumentasi kegiatan sekolah sebelum diunggah ke media sosial.',
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="hsl(var(--foreground))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M7 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M9.15 14.85l8.85 -10.85"/><path d="M6 4l8.85 10.85"/></svg>`
+      },
+      wordpress: {
+        name: 'WordPress',
+        desc: 'Content Management System (CMS) yang digunakan untuk membangun dan mengelola website sekolah, termasuk memperbarui informasi, pengumuman, dan konten akademik secara berkala.',
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="hsl(var(--foreground))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M9.5 9h3"/><path d="M4 9h2.5"/><path d="M11 9l3 11l4 -9"/><path d="M5.5 9l3.5 11l3 -7"/><path d="M18 11c.177 -.528 1 -1.364 1 -2.5c0 -1.78 -1.776 -2.5 -2.5 -2.5c-.88 0 -2.5 .72 -2.5 2.5c0 1.136 .823 1.972 1 2.5"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/></svg>`
+      },
+      figma: {
+        name: 'Figma',
+        desc: 'Alat desain antarmuka (UI/UX) berbasis web yang digunakan untuk membuat mockup, wireframe, dan komponen desain dengan presisi tinggi sebelum diimplementasikan ke dalam website atau aplikasi.',
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="hsl(var(--foreground))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px"><path d="M15 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M6 3m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z"/><path d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15"/></svg>`
+      }
+    };
+
+    function openToolSheet(key) {
+      const data = toolData[key];
+      if (!data) return;
+      document.getElementById('sheetTitle').textContent = data.name;
+      document.getElementById('sheetDesc').textContent = data.desc;
+      document.getElementById('sheetIcon').innerHTML = data.icon;
+
+      const overlay = document.getElementById('toolSheetOverlay');
+      const sheet = document.getElementById('toolSheet');
+      overlay.style.display = 'block';
+      sheet.style.display = 'block';
+      // Force reflow
+      void sheet.offsetHeight;
+      requestAnimationFrame(() => {
+        overlay.style.opacity = '1';
+        sheet.style.transform = 'translateY(0)';
+      });
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeToolSheet() {
+      const overlay = document.getElementById('toolSheetOverlay');
+      const sheet = document.getElementById('toolSheet');
+      overlay.style.opacity = '0';
+      sheet.style.transform = 'translateY(100%)';
+      setTimeout(() => {
+        overlay.style.display = 'none';
+        sheet.style.display = 'none';
+      }, 350);
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+
+</html>

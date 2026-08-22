@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="id" data-lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio - Muhammad Fadhil Manfa </title>
+  <meta name="description" content="Portfolio muhammad-fadhil-manfa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            border: "hsl(var(--border))",
+            input: "hsl(var(--input))",
+            ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))",
+            foreground: "hsl(var(--foreground))",
+            primary: {
+              DEFAULT: "hsl(var(--primary))",
+              foreground: "hsl(var(--primary-foreground))",
+            },
+            muted: {
+              DEFAULT: "hsl(var(--muted))",
+              foreground: "hsl(var(--muted-foreground))",
+            },
+            card: {
+              DEFAULT: "hsl(var(--card))",
+              foreground: "hsl(var(--card-foreground))",
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-background text-foreground antialiased">
+  <section id="hero-scene" class="scroll-scene">
+    <div class="scene-sticky">
+      <div class="hero-background"></div>
+      <div class="hero-shade"></div>
+
+      <div class="hero-content">
+        <div style="display: flex; justify-content: center">
+          <img src="assets/foto.png" alt="Foto Muhammad Fadhil Manfa" class="hero-avatar" />
+        </div>
+        <p class="hero-kicker" data-i18n="kicker">PORTOFOLIO</p>
+        <h1 class="hero-title">Muhammad <br />Fadhil Manfa</h1>
+        <p class="hero-subtitle" data-i18n="subtitle">
+          IT Staff di SD Islam Al Azhar 28 Solo Baru dengan 2 tahun pengalaman
+          di bidang IT. Passionated dalam pengembangan Web dan Mobile App.
+        </p>
+        <div class="hero-actions">
+          <a href="#experience" id="btn-detail" class="hero-button" data-i18n="btnDetail">Lihat Detail</a>
+          <div class="lang-switcher-segmented" data-active-lang="id">
+            <div class="lang-indicator"></div>
+            <button class="lang-option" data-lang-val="id" aria-label="Bahasa Indonesia">ID</button>
+            <button class="lang-option" data-lang-val="en" aria-label="English">EN</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-mockup" aria-hidden="true">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <img src="assets/sijawara.jpeg" alt="Abstract gradient art" class="phone-bg-image" />
+          <div class="phone-gradient-overlay"></div>
+          <div class="phone-center-text">
+            <div style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                ">
+              <img src="assets/smalka.jpeg" class="img-title" alt="" />
+            </div>
+            <h2 class="phone-title" data-i18n="phoneTitle">Aplikasi Sijawara</h2>
+            <p class="phone-subtitle" data-i18n="phoneSubtitle">
+              Aplikasi Monitoring Siswa di SMA Muhammadiyah Al Kautsar
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="scroll-hint">Scroll ↓</p>
+    </div>
+  </section>
+
+  <main class="mx-auto w-full max-w-md px-4 pb-24">
+    <section id="experience" class="plain-section">
+      <h2 data-i18n="sectionExperience">Pengalaman</h2>
+      <ul class="experience-list">
+        <li>
+          <a href="exp-alazhar.html" class="timeline-head block no-underline text-inherit">
+            <span class="inst-icon overflow-hidden flex-shrink-0" aria-hidden="true">
+              <img src="assets/al-azhar.png" alt="Company Logo" class="w-full h-full object-cover" />
+            </span>
+            <div class="text-left flex flex-col w-full">
+              <span class="exp-role !font-semibold !text-[0.9rem]">IT Staff & Designer</span>
+              <span class="text-[0.75rem] font-medium text-primary mt-0.5 block">SD Islam Al Azhar 28 Solo Baru</span>
+              <div class="exp-meta flex flex-col !mt-1.5 gap-1">
+                <span class="font-semibold opacity-70" data-i18n="exp1Date">2026 - Sekarang</span>
+                <span class="leading-relaxed opacity-90" data-i18n="exp1Desc">Mengelola infrastruktur IT & pengembangan
+                  web, sekaligus
+                  menangani desain grafis (flyer, konten visual, dokumentasi,
+                  dan video)</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="exp-smaga.html" class="timeline-head block no-underline text-inherit">
+            <span class="inst-icon overflow-hidden flex-shrink-0" aria-hidden="true">
+              <img src="assets/logo-smaga.png" alt="Company Logo" class="w-full h-full object-cover bg-white" />
+            </span>
+            <div class="text-left flex flex-col w-full">
+              <span class="exp-role !font-semibold !text-[0.9rem]">IT Staff & Administration Staff</span>
+              <span class="text-[0.75rem] font-medium text-primary mt-0.5 block">SMP SMA Muhammadiyah Gatak
+                (SMAGA)</span>
+              <div class="exp-meta flex flex-col !mt-1.5 gap-1">
+                <span class="font-semibold opacity-70">2025-2026</span>
+                <span class="leading-relaxed opacity-90" data-i18n="exp2Desc">Mengelola dan mengembangan website
+                  sekolah, aplikasi
+                  absensi guru, dan LMS. Serta menangani urusan administrasi
+                  sekolah.</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects" class="plain-section">
+      <h2 data-i18n="sectionProjects">Project</h2>
+      <ul class="project-list">
+        <li>
+          <button class="project-card" data-icon="NF" data-icon-class="app-icon-blue" data-icon-img="assets/sib.png"
+            data-title="SIB Mobile (PT Surya Indo Baru)" data-company="Nevmock.id" data-date="2026"
+            data-desc="Pembangunan Super App untuk kebutuhan internal PT. Surya Indo Baru dibawah naungan Dinas Perhubungan Daerah Surakarta."
+            data-chips='["Flutter", "PHP", "MySQL"]' data-links='[]' data-gallery-cols="3"
+            data-images='["assets/sib1.jpeg", "assets/sib2.jpeg", "assets/sib3.jpeg"]'>
+            <div class="timeline-head">
+              <span class="inst-icon overflow-hidden flex-shrink-0" aria-hidden="true">
+                <img src="assets/sib.png" alt="SIB Logo" class="w-full h-full object-cover" />
+              </span>
+              <div class="text-left">
+                <span class="exp-role font-semibold !text-[0.9rem]">SIB Mobile (PT Suya Indo Baru) <br />
+                  Nevmock.id</span>
+                <small class="exp-meta" data-i18n="proj1Desc">Pembangunan Super App untuk kebutuhan internal PT. Surya
+                  Indo Baru dibawah nauan Dinas Perhubungan Daerah
+                  Surakarta</small>
+              </div>
+            </div>
+            <div class="project-gallery" style="grid-template-columns: repeat(3, minmax(0, 1fr))" aria-hidden="true">
+              <img src="assets/sib1.jpeg" alt="Galeri SIB 1" />
+              <img src="assets/sib2.jpeg" alt="Galeri SIB 2" />
+              <img src="assets/sib3.jpeg" alt="Galeri SIB 3" />
+            </div>
+          </button>
+        </li>
+        <li>
+          <button class="project-card" data-icon="NF" data-icon-class="app-icon-blue" data-icon-img="assets/alfs.webp"
+            data-title="Website dan LMS Akademi Latihan Fisik Solo" data-company="Personal Project" data-date="2026"
+            data-desc="Platform digital mencakup company profile dan sistem pembelajaran online (LMS) untuk akademi latihan fisik di Solo."
+            data-chips='["PHP", "HTML", "CSS", "WordPress"]'
+            data-links='["https://akademilatihanfisiksolo.com", "https://lms.akademilatihanfisiksolo.com"]'
+            data-images='["assets/akademi1.png", "assets/lms-akademi1.png", "assets/lms-akademi2.png"]'>
+            <div class="timeline-head">
+              <span class="inst-icon overflow-hidden flex-shrink-0" aria-hidden="true">
+                <img src="assets/alfs.webp" alt="ALFS Logo" class="w-full h-full object-cover" />
+              </span>
+              <div class="text-left">
+                <span class="exp-role font-semibold !text-[0.9rem]">Website dan LMS <br />
+                  Akademi Latihan Fisik Solo</span>
+                <small class="exp-meta" data-i18n="proj2Desc">Platform digital mencakup company profile dan sistem
+                  pembelajaran online (LMS) untuk akademi latihan fisik di
+                  Solo.</small>
+              </div>
+            </div>
+            <div class="project-gallery" style="grid-template-columns: repeat(3, minmax(0, 1fr))" aria-hidden="true">
+              <img src="assets/lms-akademi1.png" alt="Galeri LMS Akademi 1" />
+              <img src="assets/lms-akademi2.png" alt="Galeri LMS Akademi 2" />
+              <img src="assets/akademi1.png" alt="Galeri LMS Akademi 3" />
+            </div>
+          </button>
+        </li>
+        <li>
+          <button class="project-card" data-icon="NF" data-icon-class="app-icon-blue" data-icon-img="assets/smalka.jpeg"
+            data-title="Aplikasi Sijawara" data-company="SMA Muhammadiyah Al Kautsar Program Khusus" data-date="2026"
+            data-desc="Aplikasi Sistem rekap ibadah siswa dan monitor orang tua untuk SMA Muhammadiyah Al Kautsar."
+            data-chips='["PHP", "Flutter", "HTML"]'
+            data-links='["https://portal-smalka.com", "https://apps.apple.com/id/app/sijawara-app/id6762842834?l=id", "https://play.google.com/store/apps/details?id=com.smalka.sijawara"]'
+            data-gallery-cols="3"
+            data-images='["assets/sijawara1.jpeg", "assets/sijawara2.jpeg", "assets/sijawara3.jpeg"]'>
+            <div class="timeline-head">
+              <span class="inst-icon overflow-hidden flex-shrink-0" aria-hidden="true">
+                <img src="assets/smalka.jpeg" alt="ALFS Logo" class="w-full h-full object-cover" />
+              </span>
+              <div class="text-left">
+                <span class="exp-role font-semibold !text-[0.9rem]">Aplikasi Sijawara</span>
+                <small class="exp-meta" data-i18n="proj3Desc">Aplikasi Sistem rekap ibadah siswa dan monitor orang tua
+                  untuk SMA Muhammadiyah Al Kautsar.</small>
+              </div>
+            </div>
+            <div class="project-gallery" style="grid-template-columns: repeat(3, minmax(0, 1fr))" aria-hidden="true">
+              <img src="assets/sijawara1.jpeg" alt="Galeri LMS Akademi 1" />
+              <img src="assets/sijawara2.jpeg" alt="Galeri LMS Akademi 2" />
+              <img src="assets/sijawara3.jpeg" alt="Galeri LMS Akademi 3" />
+            </div>
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Project Bottom Sheet -->
+  <div id="project-sheet" class="bottom-sheet" aria-hidden="true">
+    <div class="sheet-overlay" id="proj-sheet-overlay"></div>
+    <div class="sheet-content sheet-content-large">
+      <div class="sheet-drag-handle"></div>
+      <div class="sheet-header">
+        <span class="sheet-icon app-icon" id="proj-sheet-icon">NF</span>
+        <div class="sheet-header-text">
+          <h3 id="proj-sheet-title" class="sheet-title">Project Name</h3>
+          <p id="proj-sheet-subtitle" class="sheet-subtitle">Category</p>
+        </div>
+      </div>
+      <div class="sheet-body sheet-body-scrollable">
+        <p class="sheet-date" id="proj-sheet-date">Date</p>
+        <p class="sheet-desc" id="proj-sheet-desc">Description</p>
+        <div id="proj-sheet-chips" style="
+              display: none;
+              flex-wrap: wrap;
+              gap: 0.4rem;
+              margin-top: 0.75rem;
+            "></div>
+        <div id="proj-sheet-links" style="
+              display: none;
+              flex-wrap: wrap;
+              gap: 0.4rem;
+              margin-top: 0.5rem;
+            "></div>
+        <div class="proj-sheet-gallery" id="proj-sheet-gallery">
+          <!-- Images will be injected here -->
+        </div>
+      </div>
+      <button class="sheet-close" id="proj-sheet-close" aria-label="Tutup" data-i18n="btnClose">
+        Tutup
+      </button>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lb-overlay" style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        background: rgba(0, 0, 0, 0.92);
+        backdrop-filter: blur(6px);
+        align-items: center;
+        justify-content: center;
+      ">
+    <!-- Close -->
+    <button id="lb-close" aria-label="Tutup" style="
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          background: rgba(255, 255, 255, 0.08);
+          color: #fff;
+          font-size: 1.1rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+        ">
+      ✕
+    </button>
+    <!-- Prev -->
+    <button id="lb-prev" aria-label="Sebelumnya" style="
+          position: absolute;
+          left: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          background: rgba(255, 255, 255, 0.08);
+          color: #fff;
+          font-size: 1.2rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+        ">
+      ‹
+    </button>
+    <!-- Next -->
+    <button id="lb-next" aria-label="Berikutnya" style="
+          position: absolute;
+          right: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          background: rgba(255, 255, 255, 0.08);
+          color: #fff;
+          font-size: 1.2rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+        ">
+      ›
+    </button>
+    <!-- Image -->
+    <img id="lb-img" src="" alt="" style="
+          max-width: 90vw;
+          max-height: 88vh;
+          object-fit: contain;
+          border-radius: 0.75rem;
+          opacity: 0;
+          transform: scale(0.94);
+          transition:
+            opacity 0.2s ease,
+            transform 0.2s ease;
+          display: block;
+        " />
+    <!-- Counter -->
+    <div id="lb-counter" style="
+          position: absolute;
+          bottom: 1.25rem;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 0.75rem;
+          color: rgba(255, 255, 255, 0.55);
+          letter-spacing: 0.05em;
+        "></div>
+  </div>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-navbar" aria-label="Navigation">
+    <div class="bottom-navbar-inner">
+      <a href="/" id="nav-home" class="nav-icon-btn" aria-label="Home">
+        <span class="ti ti-home" aria-hidden="true"></span>
+      </a>
+      <a href="https://github.com/muhammadfadhil0" target="_blank" rel="noopener noreferrer" class="nav-icon-btn"
+        aria-label="GitHub">
+        <span class="ti ti-brand-github" aria-hidden="true"></span>
+      </a>
+      <a href="https://www.linkedin.com/in/muhammad-fadhil-manfa/" target="_blank" rel="noopener noreferrer"
+        class="nav-icon-btn" aria-label="LinkedIn">
+        <span class="ti ti-brand-linkedin" aria-hidden="true"></span>
+      </a>
+      <a href="https://www.instagram.com/fadhil.manfa/" target="_blank" rel="noopener noreferrer" class="nav-icon-btn"
+        aria-label="Instagram">
+        <span class="ti ti-brand-instagram" aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+
+  <script>
+    // ── i18n ──────────────────────────────────────────────────────────────
+    const TRANSLATIONS = {
+      id: {
+        kicker: "PORTOFOLIO",
+        subtitle: "IT Staff di SD Islam Al Azhar 28 Solo Baru dengan 2 tahun pengalaman di bidang IT. Passionated dalam pengembangan Web dan Mobile App.",
+        btnDetail: "Lihat Detail",
+        sectionExperience: "Pengalaman",
+        sectionProjects: "Project",
+        exp1Date: "2026 - Sekarang",
+        exp1Desc: "Mengelola infrastruktur IT & pengembangan web, sekaligus menangani desain grafis (flyer, konten visual, dokumentasi, dan video)",
+        exp2Desc: "Mengelola dan mengembangan website sekolah, aplikasi absensi guru, dan LMS. Serta menangani urusan administrasi sekolah.",
+        proj1Desc: "Pembangunan Super App untuk kebutuhan internal PT. Surya Indo Baru dibawah nauan Dinas Perhubungan Daerah Surakarta",
+        proj2Desc: "Platform digital mencakup company profile dan sistem pembelajaran online (LMS) untuk akademi latihan fisik di Solo.",
+        proj3Desc: "Aplikasi Sistem rekap ibadah siswa dan monitor orang tua untuk SMA Muhammadiyah Al Kautsar.",
+        btnClose: "Tutup",
+        phoneTitle: "Aplikasi Sijawara",
+        phoneSubtitle: "Aplikasi Monitoring Siswa di SMA Muhammadiyah Al Kautsar",
+      },
+      en: {
+        kicker: "PORTFOLIO",
+        subtitle: "IT Staff at SD Islam Al Azhar 28 Solo Baru with 2 years of experience in IT. Passionate about Web and Mobile App development.",
+        btnDetail: "View Details",
+        sectionExperience: "Experience",
+        sectionProjects: "Projects",
+        exp1Date: "2026 - Present",
+        exp1Desc: "Managing IT infrastructure & web development, as well as handling graphic design (flyers, visual content, documentation, and video).",
+        exp2Desc: "Managing and developing the school website, teacher attendance app, and LMS. Also handling school administrative affairs.",
+        proj1Desc: "Building a Super App for the internal needs of PT. Surya Indo Baru under the auspices of the Surakarta Regional Transportation Agency.",
+        proj2Desc: "A digital platform encompassing a company profile and an online learning system (LMS) for a fitness academy in Solo.",
+        proj3Desc: "An application for student worship recapping and parent monitoring for SMA Muhammadiyah Al Kautsar.",
+        btnClose: "Close",
+        phoneTitle: "Sijawara App",
+        phoneSubtitle: "Student Monitoring Application at SMA Muhammadiyah Al Kautsar",
+      },
+    };
+
+    let currentLang = localStorage.getItem("portfolio-lang") || "id";
+
+    function applyLang(lang) {
+      currentLang = lang;
+      localStorage.setItem("portfolio-lang", lang);
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute("data-lang", lang);
+
+      const t = TRANSLATIONS[lang];
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      // Update active state in segmented switcher
+      const switcher = document.querySelector(".lang-switcher-segmented");
+      if (switcher) {
+        switcher.setAttribute("data-active-lang", lang);
+      }
+
+      document.querySelectorAll(".lang-option").forEach((btn) => {
+        if (btn.getAttribute("data-lang-val") === lang) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+    }
+
+    // Apply saved or default language on load
+    applyLang(currentLang);
+    // ──────────────────────────────────────────────────────────────────────
+
+    (() => {
+      const root = document.documentElement;
+      const scene = document.getElementById("hero-scene");
+      if (!scene) return;
+
+      const updateProgress = () => {
+        const start = scene.offsetTop;
+        const end = start + scene.offsetHeight - window.innerHeight;
+        const distance = Math.max(1, end - start);
+        const raw = (window.scrollY - start) / distance;
+        const progress = Math.max(0, Math.min(1, raw));
+        root.style.setProperty("--hero-progress", progress.toFixed(4));
+      };
+
+      updateProgress();
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      window.addEventListener("resize", updateProgress);
+
+      // Smooth scroll for "Lihat Detail" / "View Details" button
+      const btnDetail = document.getElementById("btn-detail");
+      if (btnDetail) {
+        btnDetail.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target =
+            scene.offsetTop +
+            scene.offsetHeight -
+            window.innerHeight +
+            window.innerHeight * 0.5;
+          window.scrollTo({ top: target, behavior: "smooth" });
+        });
+      }
+
+      // Language switcher (segmented)
+      document.querySelectorAll(".lang-option").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const next = btn.getAttribute("data-lang-val");
+          if (next !== currentLang) {
+            applyLang(next);
+          }
+        });
+      });
+
+      // Smooth scroll to top for Home button
+      const navHome = document.getElementById("nav-home");
+      if (navHome) {
+        navHome.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+
+      // Project Bottom Sheet Logic
+      const projSheet = document.getElementById("project-sheet");
+      const projOverlay = document.getElementById("proj-sheet-overlay");
+      const projCloseBtn = document.getElementById("proj-sheet-close");
+      const projButtons = document.querySelectorAll(".project-card");
+
+      const pjIcon = document.getElementById("proj-sheet-icon");
+      const pjTitle = document.getElementById("proj-sheet-title");
+      const pjSubtitle = document.getElementById("proj-sheet-subtitle");
+      const pjDate = document.getElementById("proj-sheet-date");
+      const pjDesc = document.getElementById("proj-sheet-desc");
+      const pjGallery = document.getElementById("proj-sheet-gallery");
+
+      // Lightbox
+      const lbOverlay = document.getElementById("lb-overlay");
+      const lbImg = document.getElementById("lb-img");
+      const lbCounter = document.getElementById("lb-counter");
+      let lbImages = [],
+        lbIndex = 0;
+
+      const lbShow = (imgs, idx) => {
+        lbImages = imgs;
+        lbIndex = idx;
+        lbImg.style.opacity = "0";
+        lbImg.style.transform = "scale(0.94)";
+        lbImg.src = lbImages[lbIndex];
+        lbCounter.textContent = `${lbIndex + 1} / ${lbImages.length}`;
+        lbOverlay.style.display = "flex";
+        requestAnimationFrame(() => {
+          lbImg.style.opacity = "1";
+          lbImg.style.transform = "scale(1)";
+        });
+        document.body.style.overflow = "hidden";
+      };
+      const lbHide = () => {
+        lbImg.style.opacity = "0";
+        lbImg.style.transform = "scale(0.94)";
+        setTimeout(() => {
+          lbOverlay.style.display = "none";
+        }, 200);
+        document.body.style.overflow = "hidden"; // keep bottom sheet lock
+      };
+      const lbNav = (dir) => {
+        lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+        lbImg.style.opacity = "0";
+        lbImg.style.transform = "scale(0.94)";
+        setTimeout(() => {
+          lbImg.src = lbImages[lbIndex];
+          lbCounter.textContent = `${lbIndex + 1} / ${lbImages.length}`;
+          lbImg.style.opacity = "1";
+          lbImg.style.transform = "scale(1)";
+        }, 150);
+      };
+      document.getElementById("lb-close").addEventListener("click", lbHide);
+      document
+        .getElementById("lb-prev")
+        .addEventListener("click", () => lbNav(-1));
+      document
+        .getElementById("lb-next")
+        .addEventListener("click", () => lbNav(1));
+      lbOverlay.addEventListener("click", (e) => {
+        if (e.target === lbOverlay || e.target === lbImg) lbHide();
+      });
+      // Swipe support
+      let lbTouchX = null;
+      lbOverlay.addEventListener(
+        "touchstart",
+        (e) => {
+          lbTouchX = e.touches[0].clientX;
+        },
+        { passive: true },
+      );
+      lbOverlay.addEventListener("touchend", (e) => {
+        if (lbTouchX === null) return;
+        const dx = e.changedTouches[0].clientX - lbTouchX;
+        if (Math.abs(dx) > 40) lbNav(dx < 0 ? 1 : -1);
+        lbTouchX = null;
+      });
+      document.addEventListener("keydown", (e) => {
+        if (lbOverlay.style.display !== "flex") return;
+        if (e.key === "ArrowRight") lbNav(1);
+        else if (e.key === "ArrowLeft") lbNav(-1);
+        else if (e.key === "Escape") lbHide();
+      });
+
+      // Helper to attach lightbox to gallery images
+      const attachLightbox = (imgs) => {
+        const imgEls = pjGallery.querySelectorAll("img");
+        imgEls.forEach((el, i) => {
+          el.style.cursor = "zoom-in";
+          el.addEventListener("click", (e) => {
+            e.stopPropagation();
+            lbShow(imgs, i);
+          });
+        });
+      };
+
+      const openProjSheet = (btn) => {
+        // Set icon: gambar atau teks
+        if (btn.dataset.iconImg) {
+          pjIcon.className = "sheet-icon app-icon overflow-hidden";
+          pjIcon.innerHTML = `<img src="${btn.dataset.iconImg}" alt="icon" style="width:100%;height:100%;object-fit:cover;" />`;
+        } else {
+          pjIcon.textContent = btn.dataset.icon;
+          pjIcon.className = "sheet-icon app-icon" + btn.dataset.iconClass;
+        }
+        pjTitle.textContent = btn.dataset.title;
+        pjSubtitle.textContent = btn.dataset.company;
+        pjDate.textContent = btn.dataset.date;
+
+        // Get translation key from the card's small element
+        const descEl = btn.querySelector("[data-i18n]");
+        const descKey = descEl ? descEl.getAttribute("data-i18n") : null;
+        const t = TRANSLATIONS[currentLang];
+        if (descKey && t && t[descKey] !== undefined) {
+          pjDesc.textContent = t[descKey];
+        } else {
+          pjDesc.textContent = btn.dataset.desc;
+        }
+
+        // Render chips
+        const pjChips = document.getElementById("proj-sheet-chips");
+        const chips = JSON.parse(btn.dataset.chips || "[]");
+        if (chips.length) {
+          pjChips.innerHTML = chips
+            .map(
+              (c) =>
+                `<span style="display:inline-flex;align-items:center;padding:0.25rem 0.65rem;font-size:0.7rem;font-weight:500;border-radius:999px;border:1px solid hsl(var(--border));background:hsl(var(--card));color:hsl(var(--foreground));">${c}</span>`,
+            )
+            .join("");
+          pjChips.style.display = "flex";
+        } else {
+          pjChips.innerHTML = "";
+          pjChips.style.display = "none";
+        }
+
+        // Render link chips
+        const pjLinks = document.getElementById("proj-sheet-links");
+        const links = JSON.parse(btn.dataset.links || "[]");
+        if (links.length) {
+          pjLinks.innerHTML = links
+            .map((url) => {
+              const label = url.replace(/^https?:\/\//, "");
+              return `<a href="${url}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.3rem;padding:0.25rem 0.65rem;font-size:0.7rem;font-weight:500;border-radius:999px;border:1px solid hsl(var(--primary)/0.4);background:hsl(var(--primary)/0.08);color:hsl(var(--primary));text-decoration:none;">${label}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>`;
+            })
+            .join("");
+          pjLinks.style.display = "flex";
+        } else {
+          pjLinks.innerHTML = "";
+          pjLinks.style.display = "none";
+        }
+
+        // Render images
+        const cols = btn.dataset.galleryCols;
+        const images = JSON.parse(btn.dataset.images || "[]");
+        if (cols) {
+          pjGallery.style.display = "grid";
+          pjGallery.style.gridTemplateColumns = `repeat(${cols}, minmax(0, 1fr))`;
+          pjGallery.style.gap = "0.5rem";
+          pjGallery.innerHTML = images
+            .map(
+              (img) =>
+                `<img src="${img}" alt="Project image" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:0.55rem;border:1px solid hsl(var(--border));" />`,
+            )
+            .join("");
+        } else {
+          pjGallery.style.display = "";
+          pjGallery.style.gridTemplateColumns = "";
+          pjGallery.style.gap = "";
+          pjGallery.innerHTML = images
+            .map(
+              (img) =>
+                `<img src="${img}" alt="Project image" loading="lazy" />`,
+            )
+            .join("");
+        }
+        attachLightbox(images);
+
+        projSheet.classList.add("open");
+        projSheet.setAttribute("aria-hidden", "false");
+        document.body.classList.add("sheet-open");
+        document.body.style.overflow = "hidden";
+      };
+
+      const closeProjSheet = () => {
+        projSheet.classList.remove("open");
+        projSheet.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("sheet-open");
+        document.body.style.overflow = "";
+      };
+
+      projButtons.forEach((btn) => {
+        btn.addEventListener("click", () => openProjSheet(btn));
+      });
+
+      if (projOverlay) projOverlay.addEventListener("click", closeProjSheet);
+      if (projCloseBtn)
+        projCloseBtn.addEventListener("click", closeProjSheet);
+    })();
+  </script>
+</body>
+
+</html>
