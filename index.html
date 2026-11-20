@@ -172,7 +172,7 @@
             data-title="Website dan LMS Akademi Latihan Fisik Solo" data-company="Personal Project" data-date="2026"
             data-desc="Platform digital mencakup company profile dan sistem pembelajaran online (LMS) untuk akademi latihan fisik di Solo."
             data-chips='["PHP", "HTML", "CSS", "WordPress"]'
-            data-links='["https://akademilatihanfisiksolo.com", "https://lms.akademilatihanfisiksolo.com"]'
+            data-links='[{"url":"https://akademilatihanfisiksolo.com","title":"Akademi Latihan Fisik Solo","icon":"assets/icons/alfs.webp"},{"url":"https://lms.akademilatihanfisiksolo.com","title":"Dashboard | ALFS","icon":"assets/icons/alfs.webp"}]'
             data-images='["assets/akademi1.webp", "assets/lms-akademi1.png", "assets/lms-akademi2.webp"]'>
             <div class="timeline-head">
               <span class="inst-icon overflow-hidden flex-shrink-0" aria-hidden="true">
@@ -198,7 +198,7 @@
             data-title="Aplikasi Sijawara" data-company="SMA Muhammadiyah Al Kautsar Program Khusus" data-date="2026"
             data-desc="Aplikasi Sistem rekap ibadah siswa dan monitor orang tua untuk SMA Muhammadiyah Al Kautsar."
             data-chips='["PHP", "Flutter", "HTML"]'
-            data-links='["https://portal-smalka.com", "https://apps.apple.com/id/app/sijawara-app/id6762842834?l=id", "https://play.google.com/store/apps/details?id=com.smalka.sijawara"]'
+            data-links='[{"url":"https://apps.apple.com/id/app/sijawara-app/id6762842834?l=id","title":"Sijawara App - App Store","icon":"assets/icons/apple.svg"},{"url":"https://play.google.com/store/apps/details?id=com.smalka.sijawara","title":"Sijawara - Aplikasi di Google Play","icon":"assets/icons/google-play.svg"}]'
             data-gallery-cols="3"
             data-images='["assets/sijawara1.jpeg", "assets/sijawara2.jpeg", "assets/sijawara3.jpeg"]'>
             <div class="timeline-head">
@@ -635,6 +635,23 @@
         });
       };
 
+      const escapeHtml = (value) =>
+        String(value).replace(
+          /[&<>"']/g,
+          (ch) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            })[ch],
+        );
+
+      const linkArrowIcon = `<svg class="sheet-link-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+
+      const fallbackLinkIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.71 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
+
       const openProjSheet = (btn) => {
         // Set icon: gambar atau teks
         if (btn.dataset.iconImg) {
@@ -674,14 +691,26 @@
           pjChips.style.display = "none";
         }
 
-        // Render link chips
+        // Render link pills: { url, title, icon }. String lama tetap didukung.
         const pjLinks = document.getElementById("proj-sheet-links");
-        const links = JSON.parse(btn.dataset.links || "[]");
+        const links = JSON.parse(btn.dataset.links || "[]").map((link) => {
+          if (typeof link !== "string") return link;
+          let title = link;
+          try {
+            title = new URL(link).hostname.replace(/^www\./, "");
+          } catch {
+            /* biarkan apa adanya */
+          }
+          return { url: link, title, icon: "" };
+        });
+
         if (links.length) {
           pjLinks.innerHTML = links
-            .map((url) => {
-              const label = url.replace(/^https?:\/\//, "");
-              return `<a href="${url}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.3rem;padding:0.25rem 0.65rem;font-size:0.7rem;font-weight:500;border-radius:999px;border:1px solid hsl(var(--primary)/0.4);background:hsl(var(--primary)/0.08);color:hsl(var(--primary));text-decoration:none;">${label}<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>`;
+            .map((link) => {
+              const icon = link.icon
+                ? `<img src="${escapeHtml(link.icon)}" alt="" class="sheet-link-icon" loading="lazy" decoding="async" />`
+                : `<span class="sheet-link-icon sheet-link-icon-fallback">${fallbackLinkIcon}</span>`;
+              return `<a class="sheet-link" href="${escapeHtml(link.url)}" target="_blank" rel="noopener">${icon}<span class="sheet-link-title">${escapeHtml(link.title || link.url)}</span>${linkArrowIcon}</a>`;
             })
             .join("");
           pjLinks.style.display = "flex";
