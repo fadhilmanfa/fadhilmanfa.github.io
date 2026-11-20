@@ -49,7 +49,8 @@
 
       <div class="hero-content">
         <div style="display: flex; justify-content: center">
-          <img src="assets/foto.png" alt="Foto Muhammad Fadhil Manfa" class="hero-avatar" />
+          <img src="assets/foto-avatar.webp" alt="Foto Muhammad Fadhil Manfa" class="hero-avatar" width="96"
+            height="96" />
         </div>
         <p class="hero-kicker" data-i18n="kicker">PORTOFOLIO</p>
         <h1 class="hero-title">Muhammad <br />Fadhil Manfa</h1>
@@ -99,7 +100,8 @@
         <li>
           <a href="exp-alazhar.html" class="timeline-head block no-underline text-inherit">
             <span class="inst-icon overflow-hidden flex-shrink-0" aria-hidden="true">
-              <img src="assets/al-azhar.png" alt="Company Logo" class="w-full h-full object-cover" />
+              <img src="assets/al-azhar.png" alt="Company Logo" class="w-full h-full object-cover" loading="lazy"
+                decoding="async" />
             </span>
             <div class="text-left flex flex-col w-full">
               <span class="exp-role !font-semibold !text-[0.9rem]">IT Staff & Designer</span>
@@ -117,7 +119,8 @@
         <li>
           <a href="exp-smaga.html" class="timeline-head block no-underline text-inherit">
             <span class="inst-icon overflow-hidden flex-shrink-0" aria-hidden="true">
-              <img src="assets/logo-smaga.png" alt="Company Logo" class="w-full h-full object-cover bg-white" />
+              <img src="assets/logo-smaga.webp" alt="Company Logo" class="w-full h-full object-cover bg-white"
+                loading="lazy" decoding="async" />
             </span>
             <div class="text-left flex flex-col w-full">
               <span class="exp-role !font-semibold !text-[0.9rem]">IT Staff & Administration Staff</span>
@@ -158,9 +161,9 @@
               </div>
             </div>
             <div class="project-gallery" style="grid-template-columns: repeat(3, minmax(0, 1fr))" aria-hidden="true">
-              <img src="assets/sib1.jpeg" alt="Galeri SIB 1" />
-              <img src="assets/sib2.jpeg" alt="Galeri SIB 2" />
-              <img src="assets/sib3.jpeg" alt="Galeri SIB 3" />
+              <img src="assets/sib1.jpeg" alt="Galeri SIB 1" loading="lazy" decoding="async" />
+              <img src="assets/sib2.jpeg" alt="Galeri SIB 2" loading="lazy" decoding="async" />
+              <img src="assets/sib3.jpeg" alt="Galeri SIB 3" loading="lazy" decoding="async" />
             </div>
           </button>
         </li>
@@ -170,7 +173,7 @@
             data-desc="Platform digital mencakup company profile dan sistem pembelajaran online (LMS) untuk akademi latihan fisik di Solo."
             data-chips='["PHP", "HTML", "CSS", "WordPress"]'
             data-links='["https://akademilatihanfisiksolo.com", "https://lms.akademilatihanfisiksolo.com"]'
-            data-images='["assets/akademi1.png", "assets/lms-akademi1.png", "assets/lms-akademi2.png"]'>
+            data-images='["assets/akademi1.webp", "assets/lms-akademi1.png", "assets/lms-akademi2.webp"]'>
             <div class="timeline-head">
               <span class="inst-icon overflow-hidden flex-shrink-0" aria-hidden="true">
                 <img src="assets/alfs.webp" alt="ALFS Logo" class="w-full h-full object-cover" />
@@ -184,9 +187,9 @@
               </div>
             </div>
             <div class="project-gallery" style="grid-template-columns: repeat(3, minmax(0, 1fr))" aria-hidden="true">
-              <img src="assets/lms-akademi1.png" alt="Galeri LMS Akademi 1" />
-              <img src="assets/lms-akademi2.png" alt="Galeri LMS Akademi 2" />
-              <img src="assets/akademi1.png" alt="Galeri LMS Akademi 3" />
+              <img src="assets/lms-akademi1.png" alt="Galeri LMS Akademi 1" loading="lazy" decoding="async" />
+              <img src="assets/lms-akademi2.webp" alt="Galeri LMS Akademi 2" loading="lazy" decoding="async" />
+              <img src="assets/akademi1.webp" alt="Galeri LMS Akademi 3" loading="lazy" decoding="async" />
             </div>
           </button>
         </li>
@@ -209,9 +212,9 @@
               </div>
             </div>
             <div class="project-gallery" style="grid-template-columns: repeat(3, minmax(0, 1fr))" aria-hidden="true">
-              <img src="assets/sijawara1.jpeg" alt="Galeri LMS Akademi 1" />
-              <img src="assets/sijawara2.jpeg" alt="Galeri LMS Akademi 2" />
-              <img src="assets/sijawara3.jpeg" alt="Galeri LMS Akademi 3" />
+              <img src="assets/sijawara1.jpeg" alt="Galeri LMS Akademi 1" loading="lazy" decoding="async" />
+              <img src="assets/sijawara2.jpeg" alt="Galeri LMS Akademi 2" loading="lazy" decoding="async" />
+              <img src="assets/sijawara3.jpeg" alt="Galeri LMS Akademi 3" loading="lazy" decoding="async" />
             </div>
           </button>
         </li>
@@ -446,22 +449,61 @@
     // ──────────────────────────────────────────────────────────────────────
 
     (() => {
-      const root = document.documentElement;
       const scene = document.getElementById("hero-scene");
       if (!scene) return;
 
-      const updateProgress = () => {
-        const start = scene.offsetTop;
-        const end = start + scene.offsetHeight - window.innerHeight;
-        const distance = Math.max(1, end - start);
-        const raw = (window.scrollY - start) / distance;
-        const progress = Math.max(0, Math.min(1, raw));
-        root.style.setProperty("--hero-progress", progress.toFixed(4));
+      let start = 0;
+      let distance = 1;
+      let ticking = false;
+      let lastProgress = -1;
+      let heroPast = false;
+
+      // Baca layout sekali saja; offsetTop/offsetHeight tidak dipanggil per scroll.
+      const measure = () => {
+        start = scene.offsetTop;
+        distance = Math.max(1, scene.offsetHeight - window.innerHeight);
       };
 
-      updateProgress();
-      window.addEventListener("scroll", updateProgress, { passive: true });
-      window.addEventListener("resize", updateProgress);
+      const render = () => {
+        ticking = false;
+        const raw = (window.scrollY - start) / distance;
+        const progress = raw <= 0 ? 0 : raw >= 1 ? 1 : raw;
+
+        if (progress !== lastProgress) {
+          lastProgress = progress;
+          // Ditulis ke section hero (bukan <html>) supaya perubahan tidak
+          // memicu style recalculation untuk seluruh dokumen tiap frame.
+          scene.style.setProperty("--hero-progress", progress.toFixed(4));
+        }
+
+        const past = progress >= 1;
+        if (past !== heroPast) {
+          heroPast = past;
+          document.body.classList.toggle("hero-past", past);
+        }
+      };
+
+      // Scroll event di HP bisa jauh di atas 60x/detik; cukup 1 update per frame.
+      const onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(render);
+      };
+
+      measure();
+      render();
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", () => {
+        measure();
+        render();
+      });
+      // Address bar mobile mengubah tinggi viewport tanpa selalu memicu resize.
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", () => {
+          measure();
+          render();
+        });
+      }
 
       // Smooth scroll for "Lihat Detail" / "View Details" button
       const btnDetail = document.getElementById("btn-detail");
